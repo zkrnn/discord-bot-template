@@ -1,0 +1,37 @@
+
+
+# this is not a full tutorial on how to create a discord bot. to do this, please do your own research about creating, finding, and connecting your bot.
+
+import discord
+import os
+client = discord.Client()
+
+@client.event
+async def on_ready():
+		print('Connected and online!') # alerts you that your bot is active
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith(('')):  # first command (could be !help, etc.)
+        await message.channel.send('') # bot says this in chat as a response
+
+    elif  message.content.startswith(('')): # command 2
+        await message.channel.send('') # bot says this in chat as a response
+
+    elif  message.content.startswith(('')): # command 3
+        await message.channel.send('') # bot says this in chat as a response
+
+    elif  message.content.startswith(('')): # command 4
+        await message.channel.send('') # bot says this in chat as a response
+
+    elif  message.content.startswith(('')): # command 5
+        await message.channel.send('') # bot says this in chat as a response
+
+
+client.run(os.getenv('token'))
+
+# paste your bot token to where is says 'token' above
+
